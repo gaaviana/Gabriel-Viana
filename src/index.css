@@ -3,26 +3,24 @@
 @tailwind utilities;
 
 :root {
-    --color-fundo: #0f1418;
-    --color-topo: #f0f2f5;
-    
-    --color-card: #141a1f;
-    
-    --color-primaria: #20b2a6;
-    --color-primaria-topo: #fff;
+    --color-fundo: 15 20 24;
+    --color-texto: 240 242 245;
 
-    --color-secundaria: #1f2830;
-    --color-secundaria-topo: #20b2a6;
+    --color-card: 20 26 31;
 
-    --color-off: #252e37;
-    --color-off-topo: #7a8491;
-    
-    --color-border: #242b32;
-    
-    --radius: 0.75rem;
+    --color-primaria: 32 178 166;
+    --color-primaria-topo: 255 255 255;
 
-    --color-destaque: #f5a623;
-    --color-superfice: #1a2329;
+    --color-secundaria: 31 40 48;
+    --color-secundaria-topo: 32 178 166;
+
+    --color-off: 37 46 55;
+    --color-off-texto: 122 132 145;
+
+    --color-border: 36 43 50;
+
+    --color-destaque: 245 166 35;
+    --color-superficie: 26 35 41;
 }
 
 @layer base {
@@ -31,8 +29,42 @@
     }
 
     body {
-        background-color: var(--color-fundo);
-        color: var(--color-topo);
+        background-color: rgb(var(--color-fundo));
+        color: rgb(var(--color-texto));
         font-family: sans-serif; /* Inter */
     }
+}
+
+@layer components {
+    .vidro {
+       background-color: color-mix(in srgb, rgb(var(--color-superficie)) 50%, transparent); 
+       backdrop-filter: blur(16px);
+       border: 1px solid color-mix(in srgb, rgb(var(--color-border)) 50%, transparent);
+    }
+
+    .vidro-stg {
+       background-color: color-mix(in srgb, rgb(var(--color-superficie)) 80%, transparent); 
+       backdrop-filter: blur(16px);
+       border: 1px solid color-mix(in srgb, rgb(var(--color-border)) 60%, transparent);
+    }
+}
+
+@layer utilities {
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+            filter: blur(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+            ilter: blur(0);
+        }
+    }
+
+   .fade-in {
+    animation: fade-in 0.8s ease-out both;
+   }
 }
