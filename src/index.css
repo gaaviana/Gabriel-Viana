@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-fundo: #0f1418;
+    --color-topo: #f0f2f5;
+    
+    --color-card: #141a1f;
+    
+    --color-primaria: #20b2a6;
+    --color-primaria-topo: #fff;
+
+    --color-secundaria: #1f2830;
+    --color-secundaria-topo: #20b2a6;
+
+    --color-off: #252e37;
+    --color-off-topo: #7a8491;
+    
+    --color-border: #242b32;
+    
+    --radius: 0.75rem;
+
+    --color-destaque: #f5a623;
+    --color-superfice: #1a2329;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-fundo);
+        color: var(--color-topo);
+    }
+}
