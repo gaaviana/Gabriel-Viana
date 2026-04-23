@@ -11,8 +11,8 @@ const navLinks = [
 function Navbar() {
     const [menuAberto, setMenuAberto] = useState(false)
     const [scrolled, setScrolled] = useState(false)
-    
-    useEffect (() => {
+
+    useEffect(() => {
         const Scroll = () => {
             setScrolled(window.scrollY > 50)
         }
@@ -37,7 +37,9 @@ function Navbar() {
                 </div>
 
                 <div className="hidden md:block">
-                    <Button size="sm">Contato</Button>
+                    <Button size="sm" onClick={() => {
+                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                    }}>Contato</Button>
                 </div>
 
                 {/* MENU MOBILE */}
@@ -52,7 +54,14 @@ function Navbar() {
                         {navLinks.map((link, i) => (
                             <a href={link.href} key={i} onClick={() => setMenuAberto(false)} className="text-lg text-off-texto hover:text-texto py-2">{link.label}</a>
                         ))}
-                        <Button onClick={() => setMenuAberto(false)}>Contato</Button>
+                        <Button
+                            onClick={() => {
+                                setMenuAberto(false)
+                                document.getElementById("contact")?.scrollIntoView({
+                                    behavior: "smooth"
+                                })
+                            }}
+                        >Contato</Button>
                     </div>
                 </div>
             )}
