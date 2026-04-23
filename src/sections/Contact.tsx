@@ -12,13 +12,13 @@ const infosContato = [
     },
     {
         icon: Phone,
-        label: "Phone",
+        label: "Telefone",
         value: "+55 11 97836-0876",
         href: "tel:+5511978360876",
     },
     {
         icon: MapPin,
-        label: "Location",
+        label: "Localização",
         value: "São Paulo, SP",
         href: "#",
     },
@@ -82,39 +82,39 @@ function Contact() {
 
     return <section id="contact" className="py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mx-auto max-w-3xl mb-16">
-                <span className="text-secundaria-topo text-sm font-medium -tracking-wider uppercase fade-in">Get in touch</span>
-                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 fade-in delay-100 text-secundaria-topo">Let's build <span className="font-serif italic font-normal text-white">something great.</span></h2>
-                <p className="text-off-texto fade-in delay-200">
+                <div className="text-center mx-auto max-w-3xl mb-16">
+                <span className="text-cor-secundaria-texto text-sm font-medium -tracking-wider uppercase fade-in">Entre em contato</span>
+                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 fade-in delay-100 text-cor-secundaria-texto">Vamos construir <span className="font-serif italic font-normal text-white">algo incrível.</span></h2>
+                <p className="text-cor-neutro-texto fade-in delay-200">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus.
                 </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div className="vidro p-8 rounded-3xl border border-primaria/30 fade-in delay-300">
+                <div className="vidro p-8 rounded-3xl border border-cor-primaria/30 fade-in delay-300">
                     <form className="space-y-6" onSubmit={enviar}>
                         <div>
                             <label htmlFor="nome" className="block text-sm font-medium mb-2">Nome</label>
-                            <input id="nome" type="text" required placeholder="Your name..." value={dadosForm.nome} onChange={(e) => setDadosForms({ ...dadosForm, nome: e.target.value })} className="w-full px-4 py-3 bg-superficie rounded-xl border border-border focus:border-primaria focus:ring-1 focus:ring-primaria outline-none transition-all" />
+                            <input id="nome" type="text" required placeholder="Seu nome..." value={dadosForm.nome} onChange={(e) => setDadosForms({ ...dadosForm, nome: e.target.value })} className="w-full px-4 py-3 bg-cor-superficie rounded-xl border border-cor-borda focus:border-cor-primaria focus:ring-1 focus:ring-cor-primaria outline-none transition-all" />
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                            <input id="email" type="email" required placeholder="Your@email.com" value={dadosForm.email} onChange={(e) => setDadosForms({ ...dadosForm, email: e.target.value })} className="w-full px-4 py-3 bg-superficie rounded-xl border border-border focus:border-primaria focus:ring-1 focus:ring-primaria outline-none transition-all" />
+                            <input id="email" type="email" required placeholder="Seu@email.com" value={dadosForm.email} onChange={(e) => setDadosForms({ ...dadosForm, email: e.target.value })} className="w-full px-4 py-3 bg-cor-superficie rounded-xl border border-cor-borda focus:border-cor-primaria focus:ring-1 focus:ring-cor-primaria outline-none transition-all" />
                         </div>
                         <div>
                             <label htmlFor="mensagem" className="block text-sm font-medium mb-2">Mensagem</label>
-                            <textarea rows={5} required placeholder="Your message..." value={dadosForm.mensagem} onChange={(e) => setDadosForms({ ...dadosForm, mensagem: e.target.value })} className="w-full px-4 py-3 bg-superficie rounded-xl border border-border focus:border-primaria focus:ring-1 focus:ring-primaria outline-none transition-all resize-none" />
+                            <textarea rows={5} required placeholder="Sua mensagem..." value={dadosForm.mensagem} onChange={(e) => setDadosForms({ ...dadosForm, mensagem: e.target.value })} className="w-full px-4 py-3 bg-cor-superficie rounded-xl border border-cor-borda focus:border-cor-primaria focus:ring-1 focus:ring-cor-primaria outline-none transition-all resize-none" />
                         </div>
 
                         <Button className="w-full" type="submit" size="lg" disabled={carregado}>
                             {carregado ? (
                                 <>
-                                    Seending...
+                                    Enviando...
                                     <Send />
                                 </>
                             ) : (
                                 <>
-                                    Send Message
+                                    Enviar mensagem
                                     <Send className="w-5 h-5" />
                                 </>
                             )
@@ -139,16 +139,16 @@ function Contact() {
                 <div className="space-y-6 fade-in delay-400">
                     <div className="vidro rounded-3xl p-8">
                         <h3 className="text-xl font-semibold mb-6">
-                            Contact Information
+                            Informações de contato
                         </h3>
                         <div className="space-y-4">
                             { infosContato.map((info, i) => (
                                 <a key={i} href={info.href} className="flex items-center gap-4 rounded-xl hover:bg-superficie transition-colors p-3">
-                                    <div className="w-12 h-12 rounded-xl bg-primaria/10 flex items-center justify-center">
-                                        <info.icon className="w-5 h-5 text-primaria "/>
+                                    <div className="w-12 h-12 rounded-xl bg-cor-primaria/10 flex items-center justify-center">
+                                        <info.icon className="w-5 h-5 text-cor-primaria "/>
                                     </div>
                                     <div>
-                                        <div className="text-sm text-off-texto">{info.label}</div>
+                                        <div className="text-sm text-cor-neutro-texto">{info.label}</div>
                                         <div className="font-medium">{info.value}</div>
                                     </div>
                                 </a>
@@ -156,13 +156,13 @@ function Contact() {
                         </div>
                     </div>
 
-                    <div className="vidro rounded-3xl p-8 border border-primaria/30">
+                    <div className="vidro rounded-3xl p-8 border border-cor-primaria/30">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
-                            <span className="font-medium">Currently Available</span>
+                            <span className="font-medium">Atualmente disponível</span>
                         </div>
-                        <p className="text-off-texto text-sm">
-                            I'im currently open to oppotyunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!
+                        <p className="text-cor-neutro-texto text-sm">
+                            Estou aberto a oportunidades e projetos interessantes. Se você precisa de um engenheiro em tempo integral ou consultoria freelance, vamos conversar!
                         </p>
                     </div>
                 </div>

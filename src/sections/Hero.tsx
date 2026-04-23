@@ -32,45 +32,45 @@ function Hero() {
                 <div className="space-y-8">
 
                     <div className="fade-in">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full vidro text-sm text-primaria">
-                            <span className="w-2 h-2 bg-primaria rounded-full animate-pulse" />Sofware Engineer - React Specialist
+                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full vidro text-sm text-cor-primaria">
+                            <span className="w-2 h-2 bg-cor-primaria rounded-full animate-pulse" />Engenheiro de Software - Especialista em React
                         </span>
                     </div>
 
                     <div className="space-y-4">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight fade-in delay-100">
-                            Crafting <span className="text-primaria text-brilha">digital</span>
+                            Criando <span className="text-cor-primaria text-brilha">experiências</span>
                             <br />
-                            experiencies with
+                            digitais com
                             <br />
-                            <span className="font-serif italic font-normal text-white">precision.</span>
+                            <span className="font-serif italic font-normal text-white">precisão.</span>
                         </h1>
-                        <p className="text-lg text-off-texto max-w-lg fade-in delay-200">
-                            Hi, I"m Gabriel Viana - a Software engineer specializing in React, Next.js, and TyperScript. I build scalable, performant web applications that users love.
+                        <p className="text-lg text-cor-neutro-texto max-w-lg fade-in delay-200">
+                            Olá, sou Gabriel Viana — engenheiro de software especializado em React, Next.js e TypeScript. Construo aplicações web escaláveis e de alto desempenho que as pessoas adoram.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-4 fade-in delay-300">
-                        <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /> </Button>
+                        <Button size="lg">Entrar em contato <ArrowRight className="w-5 h-5" /> </Button>
                         <AnimatedButton>
-                            <Download className="w-5 h-5" /> Download CV 
+                            <Download className="w-5 h-5" /> Baixar CV 
                         </AnimatedButton>
                     </div>
 
-                    <div className="flex items-center gap-4 fade-in delay-400">
-                        <span className="text-sm text-off-texto">Follow: </span>
+                        <div className="flex items-center gap-4 fade-in delay-400">
+                        <span className="text-sm text-cor-neutro-texto">Siga: </span>
                         {[
                             { icon: FaGithub, href: "#" },
                             { icon: FaLinkedin, href: "#" },
                             { icon: FaTwitter, href: "#" },
                         ].map((social, i) => (
-                            <a href={social.href} key={i} className="p-2 rounded-full vidro hover:bg-primaria/10 hover:text-primaria transition-all duration-300">{<social.icon className="w-5 h-5" />}</a>
+                            <a href={social.href} key={i} className="p-2 rounded-full vidro hover:bg-cor-primaria/10 hover:text-cor-primaria transition-all duration-300">{<social.icon className="w-5 h-5" />}</a>
                         ))}
                     </div>
                 </div>
 
-                <div className="relative max-w-md mx-auto">
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primaria/30 via-transparent to-primaria/10 blur-2xl animate-pulse" />
+                    <div className="relative max-w-md mx-auto">
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cor-primaria/30 via-transparent to-cor-primaria/10 blur-2xl animate-pulse" />
                     <div className="relative vidro rounded-3xl p-2 borda-brilha">
                         <img src="/projects/foto-perfil.png" alt="Gabriel Viana Paulino" className="w-full aspect-[4/5] object-cover rounded-2xl" />
                     </div>
@@ -78,30 +78,30 @@ function Hero() {
                     <div className="absolute -bottom-4 -right-4 vidro rounded-xl px-4 py-3 float">
                         <div className="flex items-center gap-3">
                             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                            <span className="text-sm font-medium">Available for work</span>
+                            <span className="text-sm font-medium">Disponível para trabalho</span>
                         </div>
                     </div>
 
                     <div className="absolute -top-4 -left-4 vidro rounded-xl px-4 py-3 float delay-500">
-                        <div className="text-2xl font-bold text-primaria">5+</div>
-                        <div className="text-sm text-off-texto">Yers exp.</div>
+                        <div className="text-2xl font-bold text-cor-primaria">5+</div>
+                        <div className="text-sm text-cor-neutro-texto">Anos de experiência</div>
                     </div>
                 </div>
             </div>
 
-            <div className="mt-20 fade-in delay-600">
-                <p className="text-sm text-off-texto mb-6 text-center">Technologies I work with</p>
+                <div className="mt-20 fade-in delay-600">
+                <p className="text-sm text-cor-neutro-texto mb-6 text-center">Tecnologias com as quais trabalho</p>
                 <div className="relative overflow-hidden">
                     <div className="flex carrossel ">{[...skills, ...skills].map((skill, i) => (
-                        <div key={i} className="flex-shrink-0 px-8 py-4"><span className="text-xl font-semibold text-off-texto/50 hover:text-off-texto transition-colors">{skill}</span></div>
+                        <div key={i} className="flex-shrink-0 px-8 py-4"><span className="text-xl font-semibold text-cor-neutro-texto/50 hover:text-cor-neutro-texto transition-colors">{skill}</span></div>
                     ))}</div>
                 </div>
             </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 fade-in delay-800">
-            <a href="#about" className="flex flex-col items-center gap-2 text-off-texto hover:text-primaria">
-                <span className="text-xs uppercase tracking-wider">Scroll</span>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 fade-in delay-800">
+            <a href="#about" className="flex flex-col items-center gap-2 text-cor-neutro-texto hover:text-cor-primaria">
+                <span className="text-xs uppercase tracking-wider">Role</span>
                 <ChevronDown className="w-6 h-6 float"/>
             </a>
         </div>

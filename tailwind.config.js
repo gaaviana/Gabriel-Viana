@@ -7,24 +7,24 @@ export default {
   theme: {
     extend: {
        colors: {
-    fundo: "rgb(var(--color-fundo) / <alpha-value>)",
-    texto: "rgb(var(--color-texto) / <alpha-value>)",
+    "cor-fundo": "rgb(var(--cor-fundo) / <alpha-value>)",
+    "cor-texto": "rgb(var(--cor-texto) / <alpha-value>)",
 
-    card: "rgb(var(--color-card) / <alpha-value>)",
+    "cor-superficie-card": "rgb(var(--cor-superficie-card) / <alpha-value>)",
 
-    primaria: "rgb(var(--color-primaria) / <alpha-value>)",
-    "primaria-topo": "rgb(var(--color-primaria-topo) / <alpha-value>)",
+    "cor-primaria": "rgb(var(--cor-primaria) / <alpha-value>)",
+    "cor-primaria-texto": "rgb(var(--cor-primaria-texto) / <alpha-value>)",
 
-    secundaria: "rgb(var(--color-secundaria) / <alpha-value>)",
-    "secundaria-topo": "rgb(var(--color-secundaria-topo) / <alpha-value>)",
+    "cor-secundaria": "rgb(var(--cor-secundaria) / <alpha-value>)",
+    "cor-secundaria-texto": "rgb(var(--cor-secundaria-texto) / <alpha-value>)",
 
-    off: "rgb(var(--color-off) / <alpha-value>)",
-    "off-texto": "rgb(var(--color-off-texto) / <alpha-value>)",
+    "cor-neutro": "rgb(var(--cor-neutro) / <alpha-value>)",
+    "cor-neutro-texto": "rgb(var(--cor-neutro-texto) / <alpha-value>)",
 
-    border: "rgb(var(--color-border) / <alpha-value>)",
+    "cor-borda": "rgb(var(--cor-borda) / <alpha-value>)",
 
-    destaque: "rgb(var(--color-destaque) / <alpha-value>)",
-    superficie: "rgb(var(--color-superficie) / <alpha-value>)",
+    "cor-destaque": "rgb(var(--cor-destaque) / <alpha-value>)",
+    "cor-superficie": "rgb(var(--cor-superficie) / <alpha-value>)",
   },
       borderRadius: {
         DEFAULT: "var(--radius)",

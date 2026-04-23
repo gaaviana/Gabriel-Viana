@@ -12,7 +12,7 @@ function Button({
 }: ButtonProps) {
 
   const baseClasses =
-    "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primaria bg-primaria text-primaria-texto hover:bg-primaria/90 shadow-lg shadow-primaria/25";
+    "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-cor-primaria bg-cor-primaria text-cor-primaria-texto hover:bg-cor-primaria/90 shadow-lg shadow-cor-primaria/25";
 
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",

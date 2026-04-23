@@ -16,22 +16,22 @@ function Footer() {
      const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 border-t border-border">
+  <footer className="py-12 border-t border-cor-borda">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
           <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
-              GA<span className="text-primary">.</span>
+              GA<span className="text-cor-primaria">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Gabriel Viana. All rights reserved.
+              © {currentYear} Gabriel Viana. Todos os direitos reservados.
             </p>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
-              <a
+                <a
                 key={link.href}
                 href={link.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -43,11 +43,11 @@ function Footer() {
 
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              <a
+                <a
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                className="p-2 rounded-full glass hover:bg-cor-primaria/10 hover:text-cor-primaria transition-all"
               >
                 <social.icon className="w-5 h-5" />
               </a>

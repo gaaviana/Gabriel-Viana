@@ -3,46 +3,24 @@
 @tailwind utilities;
 
 :root {
- 
-    --color-fundo: 15 20 24;
-    --color-texto: 240 242 245;
+--cor-fundo: 15 20 24;
+--cor-texto: 240 242 245;
 
-    --color-card: 20 26 31;
+--cor-superficie-card: 20 26 31;
 
-    --color-primaria: 32 178 166;
-    --color-primaria-topo: 255 255 255;
+--cor-primaria: 32 178 166;
+--cor-primaria-texto: 255 255 255;
 
-    --color-secundaria: 31 40 48;
-    --color-secundaria-topo: 32 178 166;
+--cor-secundaria: 31 40 48;
+--cor-secundaria-texto: 32 178 166;
 
-    --color-off: 37 46 55;
-    --color-off-texto: 122 132 145;
+--cor-neutro: 37 46 55;
+--cor-neutro-texto: 122 132 145;
 
-    --color-border: 36 43 50;
+--cor-borda: 36 43 50;
 
-    --color-destaque: 245 166 35;
-    --color-superficie: 26 35 41; 
-
-
-/*     --color-fundo: 255 255 255;       
-    --color-texto: 15 23 42;          
-
-    --color-card: 248 250 252;      
-
-    
-    --color-primaria: 37 99 235;     
-    --color-primaria-topo: 255 255 255;
-
-    --color-secundaria: 241 245 249;
-    --color-secundaria-topo: 15 23 42;
-  
-    --color-off: 226 232 240;
-    --color-off-texto: 100 116 139;
-  
-    --color-border: 226 232 240;
-
-    --color-destaque: 37 99 235;
-    --color-superficie: 255 255 255; */
+--cor-destaque: 245 166 35;
+--cor-superficie: 26 35 41;
 }
 
 @layer base {
@@ -55,8 +33,8 @@
     }
 
     body {
-        background-color: rgb(var(--color-fundo));
-        color: rgb(var(--color-texto));
+        background-color: rgb(var(--cor-fundo));
+        color: rgb(var(--cor-texto));
         font-family: sans-serif; /* Inter */
     }
 
@@ -67,25 +45,25 @@
 
 @layer components {
     .vidro {
-       background-color: color-mix(in srgb, rgb(var(--color-superficie)) 50%, transparent); 
+         background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 50%, transparent); 
        backdrop-filter: blur(16px);
-       border: 1px solid color-mix(in srgb, rgb(var(--color-border)) 50%, transparent);
+         border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 50%, transparent);
     }
 
     .vidro-stg {
-       background-color: color-mix(in srgb, rgb(var(--color-superficie)) 80%, transparent); 
+         background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 80%, transparent); 
        backdrop-filter: blur(16px);
-       border: 1px solid color-mix(in srgb, rgb(var(--color-border)) 60%, transparent);
+         border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 60%, transparent);
     }
 
     .text-brilha {
-        text-shadow: 0 0 30px color-mix(in srgb, rgb(var(--color-primaria)) 50%, transparent); 
+        text-shadow: 0 0 30px color-mix(in srgb, rgb(var(--cor-primaria)) 50%, transparent); 
     }
 
     .borda-brilha {
         box-shadow: 0 0 30px 
-        color-mix(in srgb, rgb(var(--color-primaria)) 20%, transparent),
-        inset 0 0 20px  color-mix(in srgb, rgb(var(--color-primaria)) 5%, transparent); 
+        color-mix(in srgb, rgb(var(--cor-primaria)) 20%, transparent),
+        inset 0 0 20px  color-mix(in srgb, rgb(var(--cor-primaria)) 5%, transparent); 
     }
 }
 
@@ -189,8 +167,8 @@
     box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
    }
 
-   .linha-do-tempo {
-    box-shadow: 0 0 40px color-mix(in srgb, rgb(var(--color-primaria)) 35%, transparent),
-    0 0 80px color-mix(in srgb, rgb(var(--color-primaria)) 25%, transparent);
+    .linha-do-tempo {
+    box-shadow: 0 0 40px color-mix(in srgb, rgb(var(--cor-primaria)) 35%, transparent),
+    0 0 80px color-mix(in srgb, rgb(var(--cor-primaria)) 25%, transparent);
    }
 }
