@@ -33,7 +33,7 @@ function Hero() {
 
                     <div className="fade-in">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full vidro text-sm text-cor-primaria">
-                            <span className="w-2 h-2 bg-cor-primaria rounded-full animate-pulse" />Engenheiro de Software - Especialista em React
+                            <span className="w-2 h-2 bg-cor-primaria rounded-full animate-pulse" />Engenheiro de Software
                         </span>
                     </div>
 
