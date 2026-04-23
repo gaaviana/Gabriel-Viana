@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+ 
     --color-fundo: 15 20 24;
     --color-texto: 240 242 245;
 
@@ -20,12 +21,37 @@
     --color-border: 36 43 50;
 
     --color-destaque: 245 166 35;
-    --color-superficie: 26 35 41;
+    --color-superficie: 26 35 41; 
+
+
+/*     --color-fundo: 255 255 255;       
+    --color-texto: 15 23 42;          
+
+    --color-card: 248 250 252;      
+
+    
+    --color-primaria: 37 99 235;     
+    --color-primaria-topo: 255 255 255;
+
+    --color-secundaria: 241 245 249;
+    --color-secundaria-topo: 15 23 42;
+  
+    --color-off: 226 232 240;
+    --color-off-texto: 100 116 139;
+  
+    --color-border: 226 232 240;
+
+    --color-destaque: 37 99 235;
+    --color-superficie: 255 255 255; */
 }
 
 @layer base {
     html {
         scroll-behavior: smooth;
+    }
+
+    button {
+        cursor: pointer;
     }
 
     body {
@@ -161,5 +187,10 @@
     background-color: color-mix(in srgb, #26c4b8 15%, transparent);
     backdrop-filter: blur(16px);
     box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+   }
+
+   .linha-do-tempo {
+    box-shadow: 0 0 40px color-mix(in srgb, rgb(var(--color-primaria)) 35%, transparent),
+    0 0 80px color-mix(in srgb, rgb(var(--color-primaria)) 25%, transparent);
    }
 }
